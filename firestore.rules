@@ -1,0 +1,43 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && request.auth.uid == userId;
+      allow update, delete: if isOwner(userId);
+    }
+    
+    // Flights collection (read-only for users, write for admins)
+    match /flights/{flightId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only admins via Firebase Console or Cloud Functions
+    }
+    
+    // Bookings collection
+    match /bookings/{bookingId} {
+      allow read: if isAuthenticated() && 
+                     resource.data.userId == request.auth.uid;
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated() && 
+                       resource.data.userId == request.auth.uid;
+      allow delete: if false; // Bookings should not be deleted, only cancelled
+    }
+    
+    // Airports collection (read-only)
+    match /airports/{airportId} {
+      allow read: if true; // Public read access
+      allow write: if false; // Only admins
+    }
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "code": "JFK",
+    "name": "John F. Kennedy International Airport",
+    "city": "New York",
+    "country": "United States",
+    "searchTerms": ["jfk", "new york", "kennedy", "nyc"]
+  },
+  {
+    "code": "LAX",
+    "name": "Los Angeles International Airport",
+    "city": "Los Angeles",
+    "country": "United States",
+    "searchTerms": ["lax", "los angeles", "la", "california"]
+  },
+  {
+    "code": "LHR",
+    "name": "London Heathrow Airport",
+    "city": "London",
+    "country": "United Kingdom",
+    "searchTerms": ["lhr", "london", "heathrow", "uk"]
+  },
+  {
+    "code": "CDG",
+    "name": "Charles de Gaulle Airport",
+    "city": "Paris",
+    "country": "France",
+    "searchTerms": ["cdg", "paris", "charles de gaulle", "france"]
+  },
+  {
+    "code": "DXB",
+    "name": "Dubai International Airport",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "searchTerms": ["dxb", "dubai", "uae"]
+  },
+  {
+    "code": "NRT",
+    "name": "Narita International Airport",
+    "city": "Tokyo",
+    "country": "Japan",
+    "searchTerms": ["nrt", "tokyo", "narita", "japan"]
+  },
+  {
+    "code": "SIN",
+    "name": "Singapore Changi Airport",
+    "city": "Singapore",
+    "country": "Singapore",
+    "searchTerms": ["sin", "singapore", "changi"]
+  },
+  {
+    "code": "SYD",
+    "name": "Sydney Airport",
+    "city": "Sydney",
+    "country": "Australia",
+    "searchTerms": ["syd", "sydney", "australia"]
+  },
+  {
+    "code": "FRA",
+    "name": "Frankfurt Airport",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "searchTerms": ["fra", "frankfurt", "germany"]
+  },
+  {
+    "code": "AMS",
+    "name": "Amsterdam Airport Schiphol",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "searchTerms": ["ams", "amsterdam", "schiphol", "netherlands"]
+  }
+]
